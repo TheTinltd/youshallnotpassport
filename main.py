@@ -236,5 +236,5 @@ if __name__ == '__main__':
     response_from_check, premium_online_check, one_week_online_check = check(is_proxy, is_github_action)
 
     if is_twitter:
-        if one_week_online_check != 'False' or premium_online_check != 'False':
-            post(response_from_check, is_proxy, is_github_action)
+        #if one_week_online_check != 'False' or premium_online_check != 'False':
+        post(response_from_check, is_proxy, is_github_action)
