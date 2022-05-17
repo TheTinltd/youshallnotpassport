@@ -52,7 +52,7 @@ def update_csv(df_response_from_check, github_action):
     print("Updating csv file both locally and on GitHub")
 
     # Gets current csv file from open repo
-    org = "mshodge"
+    org = "TheTinltd"
     repo = "youshallnotpassport"
     branch = "main"
     file_path = "data/data.csv"
