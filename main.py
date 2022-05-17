@@ -63,8 +63,10 @@ def update_csv(df_response_from_check, github_action):
     df_string = df_to_csv_string(df)
 
     if github_action:
+        print("Using access_token_github")
         token = os.environ['access_token_github']
     else:
+        print("Using alternate")
         import config.github_credentials as github_credentials
         token = github_credentials.access_token
 
