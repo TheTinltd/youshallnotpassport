@@ -88,7 +88,7 @@ def update_csv(df_response_from_check, github_action):
 
 def post2(response):
     ACCESS_TOKEN = os.environ['access_token'] 
-    ACCESS_SECRET = os.environ['access__token_secret']
+    ACCESS_SECRET = os.environ['access_token_secret']
     CONSUMER_KEY =os.environ['consumer_key']
     CONSUMER_SECRET = os.environ['consumer_secret']
     BEARER_TOKEN = os.environ['bearer_token']
