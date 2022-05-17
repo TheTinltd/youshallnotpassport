@@ -2,7 +2,7 @@ name: check
 
 on:
   schedule:
-    - cron: "*/5 * * * *" #runs every 5th minute
+    - cron: "* * * * *" #actually runs every 5th minute
   workflow_dispatch:
 
 jobs:
