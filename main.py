@@ -91,7 +91,7 @@ def post2(response):
     ACCESS_SECRET = os.environ['access_token_secret']
     CONSUMER_KEY =os.environ['consumer_key']
     CONSUMER_SECRET = os.environ['consumer_secret']
-    BEARER_TOKEN = os.environ['bearer_token']
+    BEARER_TOKEN = 'AAAAAAAAAAAAAAAAAAAAAELIcgEAAAAAsG7LcrXU9yr7VSVMN3SoD5VZJNU%3DeEgn1MpLSHxkH7qxQxGd9sIJ0l23Yd5N9nULC6LvgwMf4qOWQ9'
 
 
     api = tweepy.Client(bearer_token=BEARER_TOKEN,
