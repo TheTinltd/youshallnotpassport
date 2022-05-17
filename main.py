@@ -65,6 +65,7 @@ def update_csv(df_response_from_check, github_action):
     if github_action:
         print("Using access_token_github")
         token = os.environ['access_token_github']
+        print(token)
     else:
         print("Using alternate")
         import config.github_credentials as github_credentials
@@ -83,6 +84,23 @@ def update_csv(df_response_from_check, github_action):
 
     # Also, saves to local disk
     df.to_csv(file_path)
+
+
+def post2(response):
+    ACCESS_TOKEN = os.environ['access_token'] 
+    ACCESS_SECRET = os.environ['access__token_secret']
+    CONSUMER_KEY =os.environ['consumer_key']
+    CONSUMER_SECRET = os.environ['consumer_secret']
+    BEARER_TOKEN = os.environ['bearer_token']
+
+
+    api = tweepy.Client(bearer_token=BEARER_TOKEN,
+                    access_token=ACCESS_TOKEN,
+                    access_token_secret=ACCESS_SECRET,
+                    consumer_key=CONSUMER_KEY,
+                    consumer_secret=CONSUMER_SECRET)
+
+    api.create_tweet(text=response)
 
 
 def post(response, proxy, github_action):
@@ -239,4 +257,5 @@ if __name__ == '__main__':
 
     if is_twitter:
         #if one_week_online_check != 'False' or premium_online_check != 'False':
-        post(response_from_check, is_proxy, is_github_action)
+        #post(response_from_check, is_proxy, is_github_action)
+        post2(response_from_check)
