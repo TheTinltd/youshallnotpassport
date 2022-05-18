@@ -1,8 +1,8 @@
 name: check
 
 on:
-  schedule:
-    - cron: "* * * * *" #actually runs every 5th minute
+  #schedule:
+  #  - cron: "* * * * *" #actually runs every 5th minute
   workflow_dispatch:
 
 jobs:
